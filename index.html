@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0>
-    <title>nao@chwy~/$</title>
+    <title>nao@chwy:~/$</title>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,8 +31,13 @@
             })
 
                 // line 1
-                .type("<span class='bluey'>nao@chwy:</span>", {instant:true})
-                .type("<span class='grey'>~/$ </span>", {instant:true})
+                .pause(2000)
+                .type("<span class='bluey'>nao@chwy:</span>", {
+                    instant:true
+                })
+                .type("<span class='grey'>~/$ </span>", {
+                    instant:true
+                })
                 .type("cd fun").break()
 
                 // line 2
@@ -44,13 +49,20 @@
                 .pause(300).break().break()
                 .type("hi, i'm a writer")
                 .pause(200).delete(6).pause(200)
-                .type("develop")
+                .type("program")
                 .pause(200).delete(9).pause(200)
                 .type("just chwy.").break()
 
                 // line 5
-                .options({speed:150})
-                .type("&emsp;&emsp;&emsp;&emsp;♡♡♡").break()
+                .options({speed:50})
+                .type(".╱|、").break()
+                .type("(˚ˎ。7   ♪ ").break()
+                .type(" .|、˜〵  ♬  ").break()
+                .type(" .じしˍ,)ノ").break()
+
+                // line
+                .type("---------------------------", {instant:true}).break()
+                
 
                 // line 6
                 .options({speed: 45})
@@ -62,7 +74,7 @@
 
                 // line 9
                 .options({speed: 45})
-                .type("i'm bilingual, infp-t, and i use <u>she/her</u>").break().break()
+                .type("i'm bilingual, 19, and i use [<u>she/her</u>]").break().break()
 
                 // line 11
                 .type("i'm a 3rd year computer science student").break()
@@ -71,13 +83,16 @@
                 .type("<3 writing, programming (sometimes), and reading").break()
 
                 // line 13
-                .type("&emsp;&emsp;&emsp;talk to me about books!").break().break()
+                .type("&emsp;--> talk to me about books!").break().break()
 
                 // line 15
-                .type("currently learning <i>japanese</i> and <i>korean</i>").break()
+                .type("currently learning").break()
+                .type("&emsp;• russian").break()
+                .type("&emsp;• dart").break()
+                .type("&emsp;• react").break()
 
                 // line 16
-                .type("huge reader. fan of literature, theology, and math.").break().break()
+                .type("a reader. fan of literature, theology, and math!").break().break()
                 .pause(300)
 
                 // line 18
@@ -111,11 +126,8 @@
                             .type("<span class='grey'>./booklist/</span>", {instant: true})
                             .pause(300).break()
                             .options({speed: 45})
-                            .type("├── the prince by machiavelli", {instant: true}).break()
-                            .type("├── the art of happiness by epicurus", {instant: true}).break()
-                            .type("├── origin by dan brown", {instant: true}).break()
-                            .type("├── the scarlet letter by nathaniel hawthorne", {instant: true}).break()
                             .type("├── infidel by ayaan hirsi ali", {instant: true}).break()
+                            .type("├── the art of happiness by epicurus", {instant: true}).break()
                             .type("└── the collected poems by sara teasdale", {instant: true})
                             .go();
                         clicked = true;
