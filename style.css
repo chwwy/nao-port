@@ -68,5 +68,10 @@ a:hover {
         justify-content: flex-start;
         font-size: 12px !important;
         font-weight: 400;
+        margin-top: -12px;
+    }
+
+    .hide-cursor .ti-cursor {
+        display: none !important;
     }
 }
