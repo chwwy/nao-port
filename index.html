@@ -30,36 +30,64 @@
                 speed: 45,
                 waitUntilVisible: true
             })
+
+                // line 1
                 .type("<span class='bluey'>nao@chwy:</span>", {instant:true})
                 .type("<span class='grey'>~/$ </span>", {instant:true})
                 .type("cd fun").break()
+
+                // line 2
                 .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true})
                 .pause(300)
                 .type("cat about_me.txt")
+
+                // line 4 - the deletion part
                 .pause(300).break().break()
                 .type("hi, i'm a writer")
                 .pause(200).delete(6).pause(200)
                 .type("develop")
                 .pause(200).delete(9).pause(200)
                 .type("just chwy.").break()
+
+                // line 5
                 .options({speed:150})
                 .type("&emsp;&emsp;&emsp;&emsp;♡♡♡").break()
+
+                // line 6
                 .options({speed: 45})
                 .type("&emsp; i like many things...").break()
+
+                // line 7
                 .options({speed: 70})
                 .type("&emsp; many <i>many</i> fa-vo-rites!").break().break()
+
+                // line 9
                 .options({speed: 45})
                 .type("i'm bilingual, infp-t, and i use <u>she/her</u>").break().break()
+
+                // line 11
                 .type("i'm a 3rd year computer science student").break()
+
+                // line 12
                 .type("<3 writing, programming (sometimes), and reading").break()
+
+                // line 13
                 .type("&emsp;&emsp;&emsp;talk to me about books!").break().break()
+
+                // line 15
                 .type("currently learning <i>japanese</i> and <i>korean</i>").break()
+
+                // line 16
                 .type("huge reader. fan of literature, theology, and math.").break().break()
                 .pause(300)
+
+                // line 18
                 .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true})
                 .pause(300)
                 .type("tree ./funstuff/")
                 .pause(300).break()
+
+                // funstuff tree
                 .type("<span class='grey'>./funstuff/ </span>", {instant: true})
                 .pause(300).break()
                 .type('├── <a href="https://medium.com/@naolyst">blog</a>', {instant: true}).break()
@@ -78,43 +106,18 @@
                 if (event.target.id === 'clickableText') {
                     if (!clicked) {
                         typeitInstance
-                            .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {
-                                instant: true
-                            })
+                            .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true})
                             .pause(300)
-                            .type("tree ./booklist/")
-                            .break()
-                            .type("<span class='grey'>./booklist/ </span>", {
-                                instant: true
-                            })
-                            .pause(300)
-                            .break()
-                            .options({
-                                speed: 45
-                            })
-                            .type("├── the prince by machiavelli", {
-                                instant: true
-                            })
-                            .break()
-                            .type("├── the art of happiness by epicurus", {
-                                instant: true
-                            })
-                            .break()
-                            .type("├── origin by dan brown", {
-                                instant: true
-                            })
-                            .break()
-                            .type("├── the scarlet letter by nathaniel hawthorne", {
-                                instant: true
-                            })
-                            .break()
-                            .type("├── infidel by ayaan hirsi ali", {
-                                instant: true
-                            })
-                            .break()
-                            .type("└── the collected poems by sara teasdale", {
-                                instant: true
-                            })
+                            .type("tree ./booklist/").break()
+                            .type("<span class='grey'>./booklist/</span>", {instant: true})
+                            .pause(300).break()
+                            .options({speed: 45})
+                            .type("├── the prince by machiavelli, {instant: true}").break()
+                            .type("├── the art of happiness by epicurus", {instant: true}).break()
+                            .type("├── origin by dan brown", {instant: true}).break()
+                            .type("├── the scarlet letter by nathaniel hawthorne", {instant: true}).break()
+                            .type("├── infidel by ayaan hirsi ali", {instant: true}).break()
+                            .type("└── the collected poems by sara teasdale", {instant: true})
                             .go();
                         clicked = true;
                     }
