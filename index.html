@@ -3,30 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>
     <title>nao@chwy~/$</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>
-            <span class="auto2"></span>
-        </h1>
-        <span class="auto2"><h1 id="clickableText" class="clickableText"></span></h1>
-        <h2>
-            <span class="auto2"><div id="textTarget"></span></div>
-        </h2>
+        <h1 class="auto"></h1>
+        <h1 id="clickableText" class="clickableText"><span class="auto"></span></h1>
+        <h1 class="textTarget"></h1>  
     </div>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var clicked = false;
 
-            new TypeIt(".auto2", {
+            new TypeIt(".auto", {
                 speed: 45,
                 waitUntilVisible: true,
                 afterComplete: function (instance) {
@@ -99,7 +95,7 @@
                 .go()
                 
 
-            var typeitInstance = new TypeIt('#textTarget', {
+            var typeitInstance = new TypeIt('.textTarget', {
                 strings: [],
                 speed: 45,
                 waitUntilVisible: true,
