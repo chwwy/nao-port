@@ -28,7 +28,10 @@
 
             new TypeIt(".auto2", {
                 speed: 45,
-                waitUntilVisible: true
+                waitUntilVisible: true,
+                afterComplete: function (instance) {
+                    instance.getElement().classList.add('hide-cursor');
+                }
             })
 
                 // line 1
@@ -92,7 +95,7 @@
                 .pause(300).break()
                 .type('├── <a href="https://medium.com/@naolyst">blog</a>', {instant: true}).break()
                 .type('├── <a href="https://open.spotify.com/user/085694381757?si=2302903e7647408c">spotify</a>', {instant: true}).break()
-                .type('└── <a href="#" id="clickableText">my booklist!</a>', {instant: true}).break()
+                .type('└── <a href="#" id="clickableText">my booklist!</a>', {instant: true}).break().break()
                 .go()
                 
 
