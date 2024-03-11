@@ -53,3 +53,7 @@ a:hover {
 .grey {
     color: #dedede;
 }
+
+.hide-cursor .ti-cursor {
+    display: none !important;
+}
