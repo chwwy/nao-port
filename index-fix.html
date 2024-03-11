@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nao@chwy~/$</title>
+    <link rel="stylesheet" href="style-fix.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <span class='bluey'>nao@chwy:</span>
+            <span class='grey'>~/$ </span>
+            <span class="auto2"></span>
+        </h1>
+        <span class="auto2"><h1 id="clickableText" class="clickableText"></span></h1>
+        <h2>
+            <span class="auto2"><div id="textTarget"></span></div>
+        </h2>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var clicked = false;
+
+            new TypeIt(".auto2", {
+                speed: 45,
+                waitUntilVisible: true
+            })
+                .type("cd fun")
+                .break()
+                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {
+                    instant: true
+                })
+                .pause(300)
+                .type("cat about_me.txt")
+                .pause(300)
+                .break()
+                .break()
+                .type("hi, i'm a writer")
+                .pause(200)
+                .delete(6)
+                .pause(200)
+                .type("develop")
+                .pause(200)
+                .delete(9)
+                .pause(200)
+                .type("just chwy.")
+                .break()
+                .options({speed:150})
+                .type("&emsp;&emsp;&emsp;&emsp;♡♡♡")
+                .break()
+                .options({
+                    speed: 45
+                })
+                .type("&emsp; i like many things...")
+                .break()
+                .options({
+                    speed: 70
+                })
+                .type("&emsp; many <i>many</i> fa-vo-rites!")
+                .break()
+                .options({
+                    speed: 45
+                })
+                .type("i'm bilingual, infp-t, and i use <u>she/her</u>")
+                .break()
+                .break()
+                .type("i'm a 3rd year computer science student")
+                .break()
+                .type("<3 writing, programming (sometimes), and reading")
+                .break()
+                .type("&emsp;&emsp;&emsp;talk to me about books!")
+                .break()
+                .break()
+                .type("currently learning <i>japanese</i> and <i>korean</i>")
+                .break()
+                .type("huge reader. fan of literature, theology, and math.")
+                .break()
+                .break()
+                .pause(300)
+                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {
+                    instant: true
+                })
+                .pause(300)
+                .type("tree ./funstuff/")
+                .pause(300)
+                .break()
+                .type("<span class='grey'>./funstuff/ </span>", {
+                    instant: true
+                })
+                .pause(300)
+                .break()
+                .type('├── <a href="https://medium.com/@naolyst">blog</a>', {
+                    instant: true
+                })
+                .break()
+                .type('├── <a href="https://open.spotify.com/user/085694381757?si=2302903e7647408c">spotify</a>', {
+                    instant: true
+                })
+                .break()
+                .type('└── <a href="#" id="clickableText">my booklist!</a>', {
+                    instant: true
+                })
+                .break()
+                .go()
+                
+
+            var typeitInstance = new TypeIt('#textTarget', {
+                strings: [],
+                speed: 45,
+                waitUntilVisible: true,
+            });
+
+            document.body.addEventListener('click', function (event) {
+                if (event.target.id === 'clickableText') {
+                    if (!clicked) {
+                        typeitInstance
+                            .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {
+                                instant: true
+                            })
+                            .pause(300)
+                            .type("tree ./booklist/")
+                            .break()
+                            .type("<span class='grey'>./booklist/ </span>", {
+                                instant: true
+                            })
+                            .pause(300)
+                            .break()
+                            .options({
+                                speed: 45
+                            })
+                            .type("├── the prince by machiavelli", {
+                                instant: true
+                            })
+                            .break()
+                            .type("├── the art of happiness by epicurus", {
+                                instant: true
+                            })
+                            .break()
+                            .type("├── origin by dan brown", {
+                                instant: true
+                            })
+                            .break()
+                            .type("├── the scarlet letter by nathaniel hawthorne", {
+                                instant: true
+                            })
+                            .break()
+                            .type("├── infidel by ayaan hirsi ali", {
+                                instant: true
+                            })
+                            .break()
+                            .type("└── the collected poems by sara teasdale", {
+                                instant: true
+                            })
+                            .go();
+                        clicked = true;
+                    }
+                }
+            });
+        })
+    
+    </script>
+
+</body>
+
+</html>
