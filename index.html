@@ -105,12 +105,10 @@
                 .type("&emsp;• react").break()
 
                 // line 16
-                .type("a reader. fan of literature, theology, and math!").break().break()
-                .pause(300)
+                .type("a reader. fan of literature, theology, and math!").break().break().pause(300)
 
                 // line 18
-                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true})
-                .pause(300)
+                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true}).pause(300)
                 .type("tree ./fun_stuff/")
                 .pause(300).break()
 
@@ -165,11 +163,9 @@
                 if (event.target.id === 'clickableText2') {
                     if (!clicked2) {
                         typeitInstance2
-                            .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true})
-                            .pause(300)
+                            .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", {instant: true}).pause(300)
                             .type("tree ./melodies/").break()
-                            .type("<span class='grey'>./melodies/</span>", {instant: true})
-                            .pause(300).break()
+                            .type("<span class='grey'>./melodies/</span>", {instant: true}).pause(300).break()
                             .options({speed: 30})
                             .type("├── taylor swift", {instant: true}).break()
                             .type("├── pierce the veil", {instant: true}).break()
@@ -191,18 +187,12 @@
                         setTimeout(function () {
                             document.getElementById('spotifyIframe').style.opacity = 1;
                             typeitInstance3
-                                .break()
-                                .pause(500)
-                                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true })
-                                .pause(300)
-                                .type("sudo apt-get install timg").break()
-                                .pause(300)
-                                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true })
-                                .pause(300)
-                                .type("timg wife.gif").break().break()
-                                .pause(1500)
-                                .type('<img src="https://64.media.tumblr.com/a11ea827623e161dcbbef023728c4048/a580b42d876b55b1-f2/s540x810/eefb7730cc75659f59d220820435cce85dec0337.gif" alt="kokomi">').break().break()
-                                .pause(1000)
+                                .break().pause(500)
+                                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
+                                .type("sudo apt-get install timg").break().pause(300)
+                                .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
+                                .type("timg wife.gif").break().break().pause(1500)
+                                .type('<img src="https://64.media.tumblr.com/a11ea827623e161dcbbef023728c4048/a580b42d876b55b1-f2/s540x810/eefb7730cc75659f59d220820435cce85dec0337.gif" alt="kokomi">').break().break().pause(1000)
                                 .type('<span style="font-size: 15px;">you can find the open source for this site <a href="https://github.com/chwwy/nao-port">here</a> ♡</span>').break().break()
                                 .go();
                         }, 4000);
