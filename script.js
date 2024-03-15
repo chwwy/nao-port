@@ -17,7 +17,12 @@ function openTab(event, tabName) {
 
 window.onload = function () {
     document.getElementById('tab1').click();
+    window.scrollTo(0,0);
 };
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     var clicked = false;
@@ -102,9 +107,9 @@ document.addEventListener('DOMContentLoaded', function () {
         strings: [],
         speed: 30,
         waitUntilVisible: true,
-        afterComplete: function (instance) {
-            instance.getElement().classList.add('hide-cursor');
-        }
+        // afterComplete: function (instance) {
+        //     instance.getElement().classList.add('hide-cursor');
+        // }
     });
 
     document.body.addEventListener('click', function (event) {
@@ -167,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     .type("sudo apt-get install timg").break().pause(300)
                     .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
                     .type("timg brainfuck.gif").break().break().pause(1500)
-                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
+                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300).break()
                     .type('<div class="button-container">')
                     .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/angellovebox.gif" alt="Button 1" width="88" height="31"></a>')
                     .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="Button 2" width="88" height="31"></a>')
@@ -225,11 +230,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 .type("├── design/illustration", { instant: true }).break()
                 .type("├── world history", { instant: true }).break()
                 .type("└── trivia quizzes", { instant: true }).break().break()
-                .type('loading album')
-                .options({ speed: 450 })
-                .type("....")
+                .type('finding more info... ').break().pause(300)
+                .options({ speed: 200 })
+                .type("[ □ □ □ □ □ □ □ □ □ □ ] - 0%",  {instant:true}).pause(100).delete(28, {instant:true}) 
+                .type("[ ■ □ □ □ □ □ □ □ □ □ ] - 10%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ □ □ □ □ □ □ □ □ ] - 20%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ □ □ □ □ □ □ □ ] - 30%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ □ □ □ □ □ □ ] - 40%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ □ □ □ □ □ ] - 50%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ □ □ □ □ ] - 60%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ ■ □ □ □ ] - 70%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ □ □ ] - 80%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ ] - 90%", {instant:true}).pause(100).delete(29, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - 100%",{instant:true}).pause(300).delete(30, {instant:true})
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - done!", {instant:true}).break().pause(1000)
                 .options({ speed: 30 })
-                .delete(17, { instant: true })
+                .delete(33, { instant: true })
+                .break()
+                .type("more_info.txt found!").break()
                 .go()
             var typeitInstance5 = new TypeIt('.textTarget5', {
                 strings: [],
@@ -240,42 +258,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 // }
             });
             setTimeout(function () {
-                document.getElementById('spotifyIframe').style.opacity = 1;
                 typeitInstance5
                     .break().pause(500)
                     .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
-                    .type("sudo apt-get install timg").break().pause(300)
-                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
-                    .type("timg brainfuck.gif").break().break().pause(1500)
-                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(300)
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/angellovebox.gif" alt="Button 1" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="Button 2" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/candyshop.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/neonlove_lani.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/sanehtml.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/gaywebring.gif" alt="Button 4" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/child.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/blink-0.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/valid-css.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/webpassion.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/css.gif" alt="Button 4" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/beyes.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/cocksuckingfaggot.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/acab.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/ecchi.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/gamercat.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/get_java.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/hello_kitty.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/forteahouse.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/knopnbk.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('</div>').break().break().pause(1000)
-                    .type('you can find the open source for this site <a href="https://github.com/chwwy/nao-port">here</a> ♡')
+                    .type("cat more_info.txt").break().pause(300)
+                    .break().type("coming soon....")
                     .go();
-            }, 4000);
+            }, 6000);
         }
         clicked3 = true;
     })
