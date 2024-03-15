@@ -253,9 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 strings: [],
                 speed: 30,
                 waitUntilVisible: true,
-                // afterComplete: function (instance) {
-                //     instance.getElement().classList.add('hide-cursor');
-                // }
             });
             setTimeout(function () {
                 typeitInstance5
