@@ -135,6 +135,7 @@ body {
     width: 97%;
     height: calc(100% - 45px);
     padding-left: 110px;
+    padding-right: 110px;
     padding-top: 20px;
     position: absolute;
     top: 35px;

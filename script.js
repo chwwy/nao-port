@@ -17,7 +17,7 @@ function openTab(event, tabName) {
 
 window.onload = function () {
     document.getElementById('tab1').click();
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 };
 
 if ('scrollRestoration' in history) {
@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         .type("<span class='grey'>./fun_stuff/ </span>", { instant: true })
         .pause(200).break()
-        .type('├── <a href="https://medium.com/@naolyst">blog</a>', { instant: true }).break()
-        .type('├── <a href="https://open.spotify.com/user/085694381757?si=2202903e7647408c">spotify</a>', { instant: true }).break()
+        .type('├── <a target="_blank" href="https://medium.com/@naolyst">blog</a>', { instant: true }).break()
+        .type('├── <a target="_blank" href="https://open.spotify.com/user/085694381757?si=2202903e7647408c">spotify</a>', { instant: true }).break()
         .type('└── <a href="#" id="clickableText">my book list! (click :3)</a>', { instant: true }).break().break()
         .go();
 
@@ -107,9 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
         strings: [],
         speed: 20,
         waitUntilVisible: true,
-        // afterComplete: function (instance) {
-        //     instance.getElement().classList.add('hide-cursor');
-        // }
     });
 
     document.body.addEventListener('click', function (event) {
@@ -160,9 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 strings: [],
                 speed: 20,
                 waitUntilVisible: true,
-                // afterComplete: function (instance) {
-                //     instance.getElement().classList.add('hide-cursor');
-                // }
             });
             setTimeout(function () {
                 document.getElementById('spotifyIframe').style.opacity = 1;
@@ -198,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/forteahouse.gif" alt="Button 3" width="88" height="31"></a>')
                     .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/knopnbk.gif" alt="Button 3" width="88" height="31"></a>')
                     .type('</div>').break().break().pause(750)
-                    .type('you can find the open source for this site <a href="https://github.com/chwwy/nao-port">here</a> ♡')
+                    .type('i made this web myself! visit the source code <a target="_blank" href="https://github.com/chwwy/nao-port">here</a> ♡')
                     .go();
             }, 4000);
         }
@@ -227,23 +221,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 .type("├── lyrical writing", { instant: true }).break()
                 .type("├── project managing", { instant: true }).break()
                 .type("├── romance literature", { instant: true }).break()
-                .type("├── design/illustration", { instant: true }).break()
-                .type("├── world history", { instant: true }).break()
-                .type("└── trivia quizzes", { instant: true }).break().break()
+                .type("└── design/illustration", { instant: true }).break()
                 .type('finding more info... ').break().pause(200)
                 .options({ speed: 200 })
-                .type("[ □ □ □ □ □ □ □ □ □ □ ] - 0%",  {instant:true}).pause(100).delete(28, {instant:true}) 
-                .type("[ ■ □ □ □ □ □ □ □ □ □ ] - 10%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ □ □ □ □ □ □ □ □ ] - 20%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ □ □ □ □ □ □ □ ] - 20%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ □ □ □ □ □ □ ] - 40%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ □ □ □ □ □ ] - 50%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ □ □ □ □ ] - 60%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ ■ □ □ □ ] - 70%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ □ □ ] - 80%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ ] - 90%", {instant:true}).pause(100).delete(29, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - 100%",{instant:true}).pause(200).delete(30, {instant:true})
-                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - done!", {instant:true}).break().pause(1000)
+                .type("[ □ □ □ □ □ □ □ □ □ □ ] - 0%", { instant: true }).pause(100).delete(28, { instant: true })
+                .type("[ ■ □ □ □ □ □ □ □ □ □ ] - 10%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ □ □ □ □ □ □ □ □ ] - 20%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ □ □ □ □ □ □ □ ] - 20%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ □ □ □ □ □ □ ] - 40%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ □ □ □ □ □ ] - 50%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ □ □ □ □ ] - 60%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ □ □ □ ] - 70%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ □ □ ] - 80%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ ] - 90%", { instant: true }).pause(100).delete(29, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - 100%", { instant: true }).pause(200).delete(30, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - done!", { instant: true }).break().pause(1000)
                 .options({ speed: 20 })
                 .delete(42, { instant: true })
                 .break().break()
@@ -251,17 +243,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 .go()
             var typeitInstance5 = new TypeIt('.textTarget5', {
                 strings: [],
-                speed: 20,
+                speed: 10,
                 waitUntilVisible: true,
             });
             setTimeout(function () {
                 typeitInstance5
                     .break().pause(500)
                     .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200)
-                    .type("cat more_info.txt").break().pause(200)
-                    .break().type("coming soon....")
+                    .type("cat more_info.txt").break().pause(200).break()
+                    .type("ok! so for the more lesser-known part about myself...").break()
+                    .type("i've been doing computer-related stuff since i was six-ish.").break()
+                    .type("i've always been the typical high functioning autistic kid, and that's aite :3 i mostly write about things i see fit (everything, actually). ")
+                    .type("thing is!.. i tend to hyperfixate and that makes me a bit of a workaholic. but people love it, people love that i work hard~ ").break().break()
+                    .type("i'm a HUGE control freak but a below average communicator. i do not communicate well at all and i cba to work on it. so... uh, either you adapt or you'll find yourself thinking what did you do wrong (nothing, i just keep to myself not because im awkward but because i like being quiet :3)").break().break()
+                    .type("english is my first language, it's not something that i learned or unnaturally picked up on. it is my first language, i just speak in gibberish sometimes because i like to speak fast to keep up with my thoughts. pls forgive me in advance.").break().break().pause(200)
+                    .type('<a target="_blank" href="https://github.com/chwwy/">github</a> ')
+                    .type('<a target="_blank" href="https://www.youtube.com/channel/UCN_a2EJvk2A_OruBVCusDKw">youtube</a> ')
+                    .type('<a target="_blank" href="https://open.spotify.com/user/085694381757?si=e3c33539f7f94eb5">spotify</a> ')
+                    .type('<a target="_blank" href="https://www.twitch.tv/naolyst">twitch</a> ')
+                    .type('<a target="_blank" href="https://steamcommunity.com/id/naolyst/">steam</a> ')
+                    .type('<a target="_blank" href="https://twitter.com/ccchwyy">twitter</a>')
                     .go();
-            }, 6000);
+            }, 5000);
         }
         clicked3 = true;
     })
