@@ -131,7 +131,9 @@ body {
     position: relative;
     z-index: -1;
     transform: translateY(-5px);
+    display: inline-block;
 }
+
 
 .tab-content {
     display: none;
@@ -166,7 +168,6 @@ body {
 .tab:not(:hover) {
     transition:all 0.1s;
 }
-
 
 a {
     color: #cee5f2;
