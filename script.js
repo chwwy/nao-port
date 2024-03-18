@@ -1,3 +1,45 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const movableDiv = document.getElementById('folder-container');
+
+    if (movableDiv) {
+        let initialX, initialY, offsetX = 0, offsetY = 0, isDragging = false;
+
+        movableDiv.addEventListener('mousedown', startDragging);
+
+        function startDragging(e) {
+            e.preventDefault();
+
+            isDragging = true;
+            initialX = e.clientX;
+            initialY = e.clientY;
+            offsetX = initialX - parseFloat(getComputedStyle(movableDiv).left);
+            offsetY = initialY - parseFloat(getComputedStyle(movableDiv).top);
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDragging);
+        }
+
+        function drag(e) {
+            if (isDragging) {
+                const x = e.clientX - offsetX;
+                const y = e.clientY - offsetY;
+                movableDiv.style.left = `${x}px`;
+                movableDiv.style.top = `${y}px`;
+            }
+        }
+
+        function stopDragging() {
+            isDragging = false;
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('mouseup', stopDragging);
+        }
+    } else {
+        console.error("Element with ID 'folder-container' not found.");
+    }
+});
+
+
+
 function openTab(event, tabName) {
     var i, tabContent, tabLinks;
 
@@ -162,35 +204,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('spotifyIframe').style.opacity = 1;
                 typeitInstance3
                     .break().pause(500)
-                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200)
-                    .type("sudo apt-get install timg").break().pause(200)
-                    .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200)
-                    .type("timg 88x31.gif").break().break().pause(600)
+                    // .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200)
+                    // .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200)
                     .type("<span class='bluey'>nao@chwy:</span><span class='grey'>~/fun$</span> ", { instant: true }).pause(200).break()
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/angellovebox.gif" alt="Button 1" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="Button 2" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/candyshop.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/neonlove_lani.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/sanehtml.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/gaywebring.gif" alt="Button 4" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/child.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/blink-0.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/valid-css.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/webpassion.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/css.gif" alt="Button 4" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/beyes.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/cocksuckingfaggot.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/acab.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/ecchi.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<div class="button-container">')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/gamercat.gif" alt="Button 5" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/get_java.gif" alt="Button 6" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/hello_kitty.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/forteahouse.gif" alt="Button 3" width="88" height="31"></a>')
-                    .type('<a href="#" class="button"><img src="https://cyber.dabamos.de/88x31/knopnbk.gif" alt="Button 3" width="88" height="31"></a>')
                     .type('</div>').break().break().pause(750)
                     .type('i made this web myself! visit the source code <a target="_blank" href="https://github.com/chwwy/nao-port">here</a> ♡')
                     .go();
@@ -234,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .type("[ ■ ■ ■ ■ ■ ■ ■ □ □ □ ] - 70%", { instant: true }).pause(100).delete(29, { instant: true })
                 .type("[ ■ ■ ■ ■ ■ ■ ■ ■ □ □ ] - 80%", { instant: true }).pause(100).delete(29, { instant: true })
                 .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ □ ] - 90%", { instant: true }).pause(100).delete(29, { instant: true })
-                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - 100%", { instant: true }).pause(200).delete(30, { instant: true })
+                .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - 100%", { instant: true }).pause(400).delete(30, { instant: true })
                 .type("[ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ] - done!", { instant: true }).break().pause(1000)
                 .options({ speed: 20 })
                 .delete(42, { instant: true })
